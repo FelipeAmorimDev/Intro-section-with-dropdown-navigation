@@ -157,7 +157,7 @@ a{
 
 .home-section{
   max-width: 1145px;
-  margin: 0 auto;
+  margin: 0 auto 130px;
   display: grid;
   grid-template-columns: 540px 1fr;
   align-items: end;

@@ -37,7 +37,6 @@ a{
 /* Header */
 
 .header{
-  
   max-width: 1358px;
   margin: 21px auto 67px;
   display: flex;
@@ -52,11 +51,11 @@ a{
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header__nav-list{
   display: flex;
-  align-items: center;
   gap: 40px;
 }
 
@@ -72,18 +71,64 @@ a{
   transition: all .4s ease-in-out;
 }
 
-.header__nav-list a:hover img{
+/* .header__nav-list a:hover > img{
   transform: rotate(180deg);
-}
+} */
 
-.header__nav-list > li.header__nav-item a:nth-child(-n+2){
+.header__nav-list > li.header__nav-item:nth-child(n) > a{
   display: flex;
   gap: 9px;
   align-items: center;
 }
+.dropdown{
+  position: relative;
+}
+
+.dropdown__freature-list{
+  display: grid;
+  
+  gap: 16px;
+}
+
+.dropdown__freature{
+  display: none;
+  max-width: 153px;
+  box-sizing: border-box;
+  left: -80%;
+  position: absolute;
+  background-color: white;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.149126);
+}
+
+.dropdown__company{
+  display: none;
+  min-width: 116px;
+  box-sizing: border-box;
+  left: 0%;
+  position: absolute;
+  background-color: white;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.149126);
+}
+
+.visible{
+  display: block;
+}
+
+.dropdown__freature-item a{
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.dropdown__freature-item a img{
+  min-width: 16px;
+}
 
 .header__nav-list .header__nav-item > a{
-  padding: 12px 0px;
+  padding: 11px 0px;
 }
 
 .header__list-right{

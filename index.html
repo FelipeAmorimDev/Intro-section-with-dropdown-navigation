@@ -17,11 +17,40 @@
     <a class="header__logo" href="index.html"><img src="./images/logo.svg" alt="Snap"></a>
     <nav class="header__nav" aria-label="nav primaria">
       <ul class="header__nav-list">
-        <li class="header__nav-item">
+        <li class="header__nav-item dropdown">
           <a href="#freature">Features<img src="./images/icon-arrow-down.svg" alt="" aria-hidden="true"></a>
+          <div class="dropdown__freature">
+            <ul class="dropdown__freature-list">
+              <li class="dropdown__freature-item">
+                <a href="#todo"><img src="./images/icon-todo.svg" alt="" aria-hidden="true">Todo List</a>
+              </li>
+              <li class="dropdown__freature-item">
+                <a href="#todo"><img src="./images/icon-calendar.svg" alt="" aria-hidden="true">Calendar</a>
+              </li>
+              <li class="dropdown__freature-item">
+                <a href="#todo"><img src="./images/icon-reminders.svg" alt="" aria-hidden="true">Reminders</a>
+              </li>
+              <li class="dropdown__freature-item">
+                <a href="#todo"><img src="./images/icon-planning.svg" alt="" aria-hidden="true">Planning</a>
+              </li>
+            </ul>
+          </div>
         </li>
-        <li class="header__nav-item">
+        <li class="header__nav-item dropdown">
           <a href="#company">Company<img src="./images/icon-arrow-down.svg" alt="" aria-hidden="true"></a>
+          <div class="dropdown__company">
+            <ul class="dropdown__freature-list">
+              <li class="dropdown__freature-item">
+                <a href="#todo">History</a>
+              </li>
+              <li class="dropdown__freature-item">
+                <a href="#todo">Our Team</a>
+              </li>
+              <li class="dropdown__freature-item">
+                <a href="#todo">Blog</a>
+              </li>
+            </ul>
+          </div>
         </li>
         <li class="header__nav-item">
           <a href="#careers">Careers</a>
@@ -73,6 +102,7 @@
     </section>
 
   </main>
+  <script src="./script/app.js"></script>
 </body>
 
 </html>

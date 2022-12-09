@@ -85,6 +85,15 @@ a{
   position: relative;
 }
 
+.dropdown:hover .dropdown__freature,.dropdown:hover .dropdown__company{
+  visibility: visible;
+  opacity: 1;
+}
+
+.dropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+
 .dropdown__freature-list{
   display: grid;
   

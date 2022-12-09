@@ -8,6 +8,7 @@
 body{
   margin: 0px;
   background-color: var(--cor-3);
+  padding: 10px 16px;
 }
 
 h1,h2,h3,p{
@@ -36,7 +37,7 @@ a{
 /* Header */
 
 .header{
-  padding: 0px 16px;
+  
   max-width: 1358px;
   margin: 21px auto 67px;
   display: flex;
@@ -93,12 +94,12 @@ a{
 
 /* Home Section */
 
+
 .home-section{
   max-width: 1145px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 540px 1fr;
-  padding: 0px 16px;
   align-items: end;
 }
 

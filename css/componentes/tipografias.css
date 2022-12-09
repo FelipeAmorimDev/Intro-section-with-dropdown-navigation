@@ -1,0 +1,25 @@
+.font-1-xxl{
+  font-family: 'Epilogue',sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -1.11px;
+}
+
+.font-1-l,.font-1-l-b{
+  font-family: 'Epilogue',sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.555;
+}
+
+.font-1-l-b{
+  font-weight: 700;
+}
+
+.font-1-s{
+  font-family: 'Epilogue',sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.142;
+}

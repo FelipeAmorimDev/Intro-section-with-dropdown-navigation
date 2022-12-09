@@ -91,3 +91,37 @@ a{
   gap: 40px;
 }
 
+/* Home Section */
+
+.home-section{
+  max-width: 1145px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 540px 1fr;
+  padding: 0px 16px;
+  align-items: end;
+}
+
+.home-section__description h1{
+  max-width: 11ch;
+}
+
+
+.home-section__description p{
+  margin:51px 0px 48px;
+  max-width: 45ch;
+}
+
+.home-section__partners-list{
+  display: flex;
+  align-items: center;
+  margin-top: 108px;
+  gap: 40px;
+}
+
+.home-section__hero-container{
+  place-self: end;
+}
+.home-section__hero-container img{
+  max-height: 647px;
+}

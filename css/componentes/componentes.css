@@ -9,3 +9,17 @@
 .header__button:hover{
   border-color: var(--cor-2);
 }
+
+.home-section__button{
+  display: inline-block;
+  padding: 15px 26.7px 13px 29.5px;
+  background-color: var(--cor-2);
+  border-radius: 15px;
+  border: 1.5px solid var(--cor-2);
+  transition: all .3s;
+}
+
+.home-section__button:hover{
+background-color: transparent;
+color: var(--cor-2);
+}

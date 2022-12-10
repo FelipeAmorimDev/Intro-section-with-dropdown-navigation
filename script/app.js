@@ -8,7 +8,6 @@ function menuMobile() {
     menuBtn.style.transform = 'rotate(180deg)'
     menuBtn.setAttribute('src', './images/icon-close-menu.svg')
     document.body.style.overflowY = 'hidden'
-
   } else {
     menuBtn.style.transform = 'rotate(-180deg)'
     menuBtn.setAttribute('src', './images/icon-menu.svg')

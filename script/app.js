@@ -5,9 +5,14 @@ const navMenu = document.querySelector('.header__nav')
 function menuMobile() {
   const isCliked = navMenu.classList.toggle('menucliked')
   if (isCliked) {
+    menuBtn.style.transform = 'rotate(180deg)'
     menuBtn.setAttribute('src', './images/icon-close-menu.svg')
+    document.body.style.overflow = 'hidden'
+
   } else {
+    menuBtn.style.transform = 'rotate(-180deg)'
     menuBtn.setAttribute('src', './images/icon-menu.svg')
+    document.body.style.overflow = 'visible'
   }
 }
 
@@ -22,8 +27,6 @@ const dropdownShow = ({ target }) => {
     if (navMenu.classList.contains('menucliked')) {
       dropdownElement.classList.toggle('visible')
     }
-    const isVisible = dropdownElement.classList.contains('visible');
-
     arrowIcon.classList.toggle("arrowcliked")
   }
 }
@@ -34,14 +37,14 @@ window.onclick = (event) => {
   const isDropdown = event.target.matches('.drop');
   const isDropLink = event.target.matches('a');
   if (!isDropdown) {
-    if(!isDropLink){
+    if (!isDropLink) {
       dropdownsOpened.forEach(dropdown => {
         const arrowElement = dropdown.parentElement.children[0].children[0]
         dropdown.classList.remove('visible')
         arrowElement.classList.toggle("arrowcliked")
       })
     }
-   
+
   }
 }
 

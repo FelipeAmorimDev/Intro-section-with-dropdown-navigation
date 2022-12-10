@@ -13,6 +13,7 @@ function menuMobile() {
 
 //    Dropdown Click
 const dropdownShow = ({ target }) => {
+  console.log(target)
   const dropdownElement = target.parentElement.children[1]
   const arrowIcon = target.children[0]
   const isDropElement = target.classList.contains('drop')
@@ -31,17 +32,20 @@ const dropdownShow = ({ target }) => {
 window.onclick = (event) => {
   const dropdownsOpened = document.querySelectorAll('.visible')
   const isDropdown = event.target.matches('.drop');
+  const isDropLink = event.target.matches('a');
   if (!isDropdown) {
-    dropdownsOpened.forEach(dropdown => {
-      const arrowElement = dropdown.parentElement.children[0].children[0]
-      dropdown.classList.remove('visible')
-      arrowElement.classList.toggle("arrowcliked")
-    })
+    if(!isDropLink){
+      dropdownsOpened.forEach(dropdown => {
+        const arrowElement = dropdown.parentElement.children[0].children[0]
+        dropdown.classList.remove('visible')
+        arrowElement.classList.toggle("arrowcliked")
+      })
+    }
+   
   }
 }
 
 menuBtn.addEventListener('click', menuMobile)
-
 linksDropdown.forEach((item) => {
   item.addEventListener('click', dropdownShow)
 })

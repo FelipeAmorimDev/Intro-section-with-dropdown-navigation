@@ -83,7 +83,10 @@ a {
   transform: rotate(180deg);
 } */
 
-.header__nav-list>li.header__nav-item:nth-child(n)>a {
+
+/* Melhorar esse seletor */
+
+.header__nav-list>li.header__nav-item:nth-child(n)>a { 
   display: flex;
   gap: 9px;
   align-items: center;
@@ -92,9 +95,6 @@ a {
 .dropdown {
   position: relative;
 }
-
-
-
 
 .dropdown__freature {
   visibility: hidden;
@@ -143,6 +143,10 @@ a {
   visibility: visible;
   display: block !important;
   opacity: 1;
+}
+
+.arrowcliked{
+  transform: rotate(180deg);
 }
 
 .header__nav-list .header__nav-item>a {

@@ -1,55 +1,46 @@
 const linksDropdown = document.querySelectorAll('.dropdown');
-const menuHb = document.querySelector('.menuhb');
-const menu = document.querySelector('.header__nav')
-const seta = document.querySelectorAll('.dropdown > a > img')
+const menuBtn = document.querySelector('.menuhb');
+const navMenu = document.querySelector('.header__nav')
 
 function menuMobile() {
-  menu.classList.toggle('menucliked')
-  const isCliked = menu.classList.contains('menucliked')
+  const isCliked = navMenu.classList.toggle('menucliked')
   if (isCliked) {
-    menuHb.setAttribute('src', './images/icon-close-menu.svg')
-    } else {
-    menuHb.setAttribute('src', './images/icon-menu.svg')
+    menuBtn.setAttribute('src', './images/icon-close-menu.svg')
+  } else {
+    menuBtn.setAttribute('src', './images/icon-menu.svg')
   }
 }
 
 //    Dropdown Click
-const dropdownShow = (event) => {
- 
-  const linkDrop = event.target.parentElement.children[1]
-  const imgLinkDrop = event.target.children[0]
-  const isDropElement = event.target.classList.contains('drop')
+const dropdownShow = ({ target }) => {
+  const dropdownElement = target.parentElement.children[1]
+  const arrowIcon = target.children[0]
+  const isDropElement = target.classList.contains('drop')
 
   if (isDropElement) {
-    if (menu.classList.contains('menucliked')) {
-      linkDrop.classList.toggle('visible')
+    if (navMenu.classList.contains('menucliked')) {
+      dropdownElement.classList.toggle('visible')
     }
-    const isVisible = linkDrop.classList.contains('visible');
+    const isVisible = dropdownElement.classList.contains('visible');
 
-    if (isVisible) {
-      imgLinkDrop.style.transform = 'rotate(180deg)'
-    } else {
-      imgLinkDrop.style.transform = 'rotate(0deg)'
-    }
+    arrowIcon.classList.toggle("arrowcliked")
   }
 }
 
+// Close dropdown when the user click out of dropdown
 window.onclick = (event) => {
-  const dropsVisible = document.querySelectorAll('.visible')
-  if (!(event.target.matches('.drop'))) {
-    dropsVisible.forEach(element => {
-      const isVisible = element.classList.contains('visible');
-      if (isVisible) {
-        const arrowElement = element.parentElement.children[0].children[0]
-        element.classList.remove('visible')
-        arrowElement.style.transform = 'rotate(0deg)'
-      }
+  const dropdownsOpened = document.querySelectorAll('.visible')
+  const isDropdown = event.target.matches('.drop');
+  if (!isDropdown) {
+    dropdownsOpened.forEach(dropdown => {
+      const arrowElement = dropdown.parentElement.children[0].children[0]
+      dropdown.classList.remove('visible')
+      arrowElement.classList.toggle("arrowcliked")
     })
-
   }
 }
 
-menuHb.addEventListener('click', menuMobile)
+menuBtn.addEventListener('click', menuMobile)
 
 linksDropdown.forEach((item) => {
   item.addEventListener('click', dropdownShow)

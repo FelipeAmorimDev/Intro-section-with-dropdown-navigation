@@ -94,9 +94,14 @@ a {
 }
 
 .dropdown:hover .dropdown__freature,
-.dropdown:hover .dropdown__company {
+.dropdown:hover .dropdown__company,
+.dropdown:active .dropdown__freature,
+.dropdown:active .dropdown__company {
   visibility: visible;
+  display: block;
   opacity: 1;
+  border-radius: initial;
+  box-shadow: none;
 }
 
 .dropdown:hover .arrow {
@@ -162,15 +167,77 @@ a {
   gap: 40px;
 }
 
+/* Menu hb */
+
+.menuhb {
+  display: none;
+  cursor: pointer;
+  z-index: 3;
+}
+
+/* .header__nav{
+  display: block;
+} */
+
+/* .header__nav.menucliked{
+  display: block;
+} */
 @media (max-width:780px) {
+  .header {
+    gap: 0px;
+    justify-content: space-between;
+
+  }
+
   .header__nav {
-    /* visibility: hidden; */
+    position: absolute;
+    width: 66%;
+    height: 100%;
     display: none;
+    background-color: #fff;
+    top: 0px;
+    right: 0px;
+    padding: 24px;
+  }
+
+  .header__nav.menucliked {
+    display: block;
+  }
+
+  .header__nav-list,
+  .header__list-right {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .header__list-right li.header__nav-item:last-child {
+    align-self: stretch;
+    margin-top: 12px;
+
+  }
+
+  .header__list-right li.header__nav-item:last-child a {
+    width: calc(100% - 48px);
+    text-align: center;
+  }
+
+  .dropdown__freature, .dropdown__company {
+    left: 0;
+    display: none;
+    position: static;
+  }
+
+  .header__nav-list{
+    align-items: flex-start;
+  }
+
+  .menuhb {
+    display: block;
   }
 }
 
-@media (max-width:600px){
-  .header{
+@media (max-width:600px) {
+  .header {
     margin-bottom: 24px;
   }
 }
@@ -236,6 +303,7 @@ a {
   .home-section__partners-list {
     margin-top: 50px;
   }
+
   .home-section__description h1 {
     max-width: initial;
     word-wrap: break-word;
@@ -250,27 +318,29 @@ a {
     grid-template-columns: 1fr;
     gap: 47px;
   }
-  
+
   .home-section__hero-container {
     order: -1;
   }
 
-  .home-section__description{
+  .home-section__description {
     text-align: center;
   }
 
-  .home-section__description h1 > span {
+  .home-section__description h1>span {
     display: inline-block;
   }
 
   .home-section__partners-list {
     justify-content: space-between;
   }
-  .home-section__description p{
+
+  .home-section__description p {
     margin: 20px auto 26px;
     max-width: initial;
   }
-  .home-section{
+
+  .home-section {
     margin-bottom: 94px;
   }
 }

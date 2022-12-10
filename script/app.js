@@ -1,5 +1,19 @@
 const linksDropdown = document.querySelectorAll('.dropdown');
+const menuHb = document.querySelector('.menuhb');
+const menu = document.querySelector('.header__nav')
 
+function menuMobile () {
+  menu.classList.toggle('menucliked')
+  const isCliked = menu.classList.contains('menucliked')
+  
+  if(isCliked){
+    menuHb.setAttribute('src','./images/icon-close-menu.svg')
+  }else{
+    menuHb.setAttribute('src','./images/icon-menu.svg')
+  }
+}
+
+menuHb.addEventListener('click', menuMobile)
 
 //    Dropdown Click
 // const dropdownShow = (event) => {

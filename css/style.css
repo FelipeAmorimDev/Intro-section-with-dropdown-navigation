@@ -95,11 +95,6 @@ a {
 
 
 
-.dropdown__freature-list {
-  display: grid;
-
-  gap: 16px;
-}
 
 .dropdown__freature {
   visibility: hidden;
@@ -129,6 +124,11 @@ a {
   transition: all .2s ease-in;
 }
 
+.dropdown__freature-list {
+  display: grid;
+  gap: 16px;
+}
+
 .dropdown__freature-item a {
   display: flex;
   gap: 14px;
@@ -141,7 +141,7 @@ a {
 
 .visible {
   visibility: visible;
-  display: block!important;
+  display: block !important;
   opacity: 1;
 }
 
@@ -163,9 +163,6 @@ a {
   z-index: 3;
 }
 
-
-
-
 @media (min-width:780px) {
 
   .dropdown:hover .dropdown__freature,
@@ -173,8 +170,6 @@ a {
     visibility: visible;
     display: block;
     opacity: 1;
-    /* border-radius: initial;
-  box-shadow: none; */
   }
 
   .dropdown:hover .arrow {
@@ -247,7 +242,6 @@ a {
 
 /* Home Section */
 
-
 .home-section {
   max-width: 1145px;
   margin: 0 auto 130px;
@@ -264,8 +258,6 @@ a {
 .home-section__description span {
   display: block;
 }
-
-
 
 .home-section__description p {
   margin: 51px 0px 48px;
@@ -300,9 +292,7 @@ a {
   }
 }
 
-
 @media (max-width:800px) {
-
   .home-section__partners-list {
     margin-top: 50px;
   }
@@ -311,12 +301,9 @@ a {
     max-width: initial;
     word-wrap: break-word;
   }
-
-
 }
 
 @media(max-width:680px) {
-
   .home-section {
     grid-template-columns: 1fr;
     gap: 47px;

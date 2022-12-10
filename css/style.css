@@ -93,20 +93,7 @@ a {
   position: relative;
 }
 
-.dropdown:hover .dropdown__freature,
-.dropdown:hover .dropdown__company,
-.dropdown:active .dropdown__freature,
-.dropdown:active .dropdown__company {
-  visibility: visible;
-  display: block;
-  opacity: 1;
-  border-radius: initial;
-  box-shadow: none;
-}
 
-.dropdown:hover .arrow {
-  transform: rotate(180deg);
-}
 
 .dropdown__freature-list {
   display: grid;
@@ -142,11 +129,6 @@ a {
   transition: all .2s ease-in;
 }
 
-.visible {
-  /* visibility: visible; */
-  opacity: 1;
-}
-
 .dropdown__freature-item a {
   display: flex;
   gap: 14px;
@@ -155,6 +137,12 @@ a {
 
 .dropdown__freature-item a img {
   min-width: 16px;
+}
+
+.visible {
+  visibility: visible;
+  display: block!important;
+  opacity: 1;
 }
 
 .header__nav-list .header__nav-item>a {
@@ -175,13 +163,25 @@ a {
   z-index: 3;
 }
 
-/* .header__nav{
-  display: block;
-} */
 
-/* .header__nav.menucliked{
-  display: block;
-} */
+
+
+@media (min-width:780px) {
+
+  .dropdown:hover .dropdown__freature,
+  .dropdown:hover .dropdown__company {
+    visibility: visible;
+    display: block;
+    opacity: 1;
+    /* border-radius: initial;
+  box-shadow: none; */
+  }
+
+  .dropdown:hover .arrow {
+    transform: rotate(180deg);
+  }
+}
+
 @media (max-width:780px) {
   .header {
     gap: 0px;
@@ -221,13 +221,16 @@ a {
     text-align: center;
   }
 
-  .dropdown__freature, .dropdown__company {
+  .dropdown__freature,
+  .dropdown__company {
     left: 0;
     display: none;
     position: static;
+    border-radius: initial;
+    box-shadow: none;
   }
 
-  .header__nav-list{
+  .header__nav-list {
     align-items: flex-start;
   }
 

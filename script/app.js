@@ -7,12 +7,12 @@ function menuMobile() {
   if (isCliked) {
     menuBtn.style.transform = 'rotate(180deg)'
     menuBtn.setAttribute('src', './images/icon-close-menu.svg')
-    document.body.style.overflow = 'hidden'
+    document.body.style.overflowY = 'hidden'
 
   } else {
     menuBtn.style.transform = 'rotate(-180deg)'
     menuBtn.setAttribute('src', './images/icon-menu.svg')
-    document.body.style.overflow = 'visible'
+    document.body.style.overflowY = 'visible'
   }
 }
 

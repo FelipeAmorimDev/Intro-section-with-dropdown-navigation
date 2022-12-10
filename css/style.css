@@ -9,6 +9,7 @@ body {
   margin: 0px;
   background-color: var(--cor-3);
   padding: 0px 16px;
+  overflow-x: hidden;
 }
 
 h1,

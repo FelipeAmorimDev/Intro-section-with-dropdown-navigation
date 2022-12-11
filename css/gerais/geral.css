@@ -1,0 +1,35 @@
+/* Geral */
+
+body {
+  margin: 0px;
+  background-color: var(--cor-3);
+  padding: 0px 16px;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+li {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

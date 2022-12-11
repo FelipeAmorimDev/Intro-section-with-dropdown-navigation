@@ -37,10 +37,10 @@ const dropdownShow = (event) => {
 
   if (isDropElement) {
     if (navMenu.classList.contains('menucliked')) {
-      event.preventDefault();
       dropdownElement.classList.toggle('visible')
       arrowIcon.classList.toggle("arrowcliked")
     }
+    event.preventDefault();
   }
 }
 
@@ -59,10 +59,10 @@ window.onclick = (event) => {
 }
 
 menuBtn.addEventListener('click', menuMobile)
+
 linksDropdown.forEach((item) => {
   item.addEventListener('click', dropdownShow)
 })
-
 linksMenu.forEach(link => {
   link.addEventListener('click', closeMenu)
 })

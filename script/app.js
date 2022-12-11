@@ -4,37 +4,43 @@ const navMenu = document.querySelector('.header__nav')
 const linksMenu = document.querySelectorAll('.header__wrapper a:not(.drop)')
 
 function menuMobile() {
-  const isCliked = navMenu.classList.toggle('menucliked')
+  navMenu.classList.toggle('menucliked')
+  menuFunctions()
+}
+
+function menuFunctions() {
+  const isCliked = navMenu.classList.contains('menucliked')
   if (isCliked) {
-    menuBtn.style.transform = 'rotate(180deg)'
     menuBtn.setAttribute('src', './images/icon-close-menu.svg')
+    menuBtn.style.transform = 'rotate(180deg)'
     document.body.style.overflowY = 'hidden'
   } else {
-    menuBtn.style.transform = 'rotate(-180deg)'
     menuBtn.setAttribute('src', './images/icon-menu.svg')
+    menuBtn.style.transform = 'rotate(-180deg)'
     document.body.style.overflowY = 'visible'
   }
 }
 
-function closeMenu(){
-  const isMenuOpened  = navMenu.classList.contains("menucliked")
-  if(isMenuOpened){
+function closeMenu() {
+  const isMenuOpened = navMenu.classList.contains("menucliked")
+  if (isMenuOpened) {
     navMenu.classList.remove('menucliked')
+    menuFunctions()
   }
 }
 
 //    Dropdown Click
-const dropdownShow = ({ target }) => {
-  console.log(target)
-  const dropdownElement = target.parentElement.children[1]
-  const arrowIcon = target.children[0]
-  const isDropElement = target.classList.contains('drop')
+const dropdownShow = (event) => {
+  event.preventDefault()
+  const dropdownElement = event.target.parentElement.children[1]
+  const arrowIcon = event.target.children[0]
+  const isDropElement = event.target.classList.contains('drop')
 
   if (isDropElement) {
     if (navMenu.classList.contains('menucliked')) {
       dropdownElement.classList.toggle('visible')
+      arrowIcon.classList.toggle("arrowcliked")
     }
-    arrowIcon.classList.toggle("arrowcliked")
   }
 }
 
@@ -58,5 +64,5 @@ linksDropdown.forEach((item) => {
 })
 
 linksMenu.forEach(link => {
-  link.addEventListener('click',closeMenu)
+  link.addEventListener('click', closeMenu)
 })

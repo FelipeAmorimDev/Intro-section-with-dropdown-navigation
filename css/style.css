@@ -209,8 +209,7 @@ a {
     right: 0px;
     padding: 24px;
     transition: all .3s;
-    
-  }
+ }
 
   .header__nav.menucliked .header__wrapper {
     width: calc(70% - 48px);

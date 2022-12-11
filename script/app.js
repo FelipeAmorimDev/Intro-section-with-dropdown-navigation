@@ -5,10 +5,18 @@ const linksMenu = document.querySelectorAll('.header__wrapper a:not(.drop)')
 
 function menuMobile() {
   navMenu.classList.toggle('menucliked')
-  menuFunctions()
+  menuAppearance()
 }
 
-function menuFunctions() {
+function closeMenu() {
+  const isMenuOpened = navMenu.classList.contains("menucliked")
+  if (isMenuOpened) {
+    navMenu.classList.remove('menucliked')
+    menuAppearance()
+  }
+}
+
+function menuAppearance() {
   const isCliked = navMenu.classList.contains('menucliked')
   if (isCliked) {
     menuBtn.setAttribute('src', './images/icon-close-menu.svg')
@@ -21,23 +29,15 @@ function menuFunctions() {
   }
 }
 
-function closeMenu() {
-  const isMenuOpened = navMenu.classList.contains("menucliked")
-  if (isMenuOpened) {
-    navMenu.classList.remove('menucliked')
-    menuFunctions()
-  }
-}
-
 //    Dropdown Click
 const dropdownShow = (event) => {
-  event.preventDefault()
   const dropdownElement = event.target.parentElement.children[1]
   const arrowIcon = event.target.children[0]
   const isDropElement = event.target.classList.contains('drop')
 
   if (isDropElement) {
     if (navMenu.classList.contains('menucliked')) {
+      event.preventDefault();
       dropdownElement.classList.toggle('visible')
       arrowIcon.classList.toggle("arrowcliked")
     }

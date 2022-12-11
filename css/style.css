@@ -175,6 +175,10 @@ a {
   transition: all .3s;
 }
 
+.rotateBtn{
+  transform: rotate(180deg);
+}
+
 @media (min-width:780px) {
 
   .dropdown:hover .dropdown__freature,

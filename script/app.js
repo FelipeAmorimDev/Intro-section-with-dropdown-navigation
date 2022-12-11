@@ -18,15 +18,15 @@ function closeMenu() {
 
 function menuAppearance() {
   const isCliked = navMenu.classList.contains('menucliked')
+  menuBtn.classList.toggle('rotateBtn')
   if (isCliked) {
     menuBtn.setAttribute('src', './images/icon-close-menu.svg')
-    menuBtn.style.transform = 'rotate(180deg)'
     document.body.style.overflowY = 'hidden'
   } else {
     menuBtn.setAttribute('src', './images/icon-menu.svg')
-    menuBtn.style.transform = 'rotate(-180deg)'
     document.body.style.overflowY = 'visible'
   }
+  
 }
 
 //    Dropdown Click

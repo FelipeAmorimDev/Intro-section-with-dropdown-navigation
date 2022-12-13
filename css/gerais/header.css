@@ -131,6 +131,7 @@
 
 .rotateBtn{
   transform: rotate(180deg);
+  
 }
 
 @media (min-width:780px) {
